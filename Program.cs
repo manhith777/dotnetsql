@@ -5,8 +5,8 @@ class Program
 {
     static void Main()
     {
-        SqlConnection con = new SqlConnection("Server=localhost;Database=StudentDB_New;Trusted_Connection=True;");
-
+        // Define the connection string here
+        string connectionString = "Server=localhost;Database=StudentDB_New;Trusted_Connection=True;";
 
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
@@ -26,4 +26,3 @@ class Program
         }
     }
 }
-
