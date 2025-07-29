@@ -5,7 +5,8 @@ class Program
 {
     static void Main()
     {
-        string connectionString = "Server=localhost\\SQLEXPRESS;Database=StudentDB;Integrated Security=True;";
+        SqlConnection con = new SqlConnection("Server=localhost;Database=StudentDB_New;Trusted_Connection=True;");
+
 
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
