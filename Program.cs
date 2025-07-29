@@ -5,13 +5,12 @@ class Program
 {
     static void Main()
     {
-        // Define the connection string here
         string connectionString = "Server=localhost;Database=StudentDB_New;Trusted_Connection=True;";
 
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
-            string query = "SELECT StudentID, Name, Age FROM Students";
+            string query = "SELECT StudentID, Name, Age FROM dbo.NewStudents";
 
             using (SqlCommand command = new SqlCommand(query, connection))
             {
